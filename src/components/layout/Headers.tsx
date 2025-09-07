@@ -58,7 +58,6 @@ export default function Header() {
     <>
       <nav className="backdrop-blur-md bg-white/70 dark:bg-secondary/80 border-b border-gray-200 shadow-md px-2 sm:px-4 py-2 sm:py-3 w-full rounded-b-2xl">
         <div className="flex flex-wrap items-center justify-between gap-2 sm:gap-4 lg:gap-8 max-w-7xl mx-auto">
-          {/* Logo (clickable) */}
           <a
             href="/"
             className="flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-[#e07a5f] rounded-full transition"
@@ -66,12 +65,10 @@ export default function Header() {
             <Butterfly className="w-8 h-8 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 hover:scale-105 transition-transform" />
           </a>
 
-          {/* Search Bar - Hidden on mobile, shown on tablet+ */}
           <div className="hidden sm:flex flex-1 justify-end max-w-md lg:max-w-lg mx-2 sm:mx-4">
             <SearchBar onSearch={fetchData} searchLoading={isSearching} />
           </div>
 
-          {/* User/Login/Logout */}
           <div className="flex-shrink-0 flex items-center gap-2">
             {!loadingUser && !user && (
               <Button

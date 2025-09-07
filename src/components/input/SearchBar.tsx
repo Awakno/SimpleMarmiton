@@ -55,7 +55,6 @@ export default function SearchBar({
     onKeyDown?.(e);
   };
 
-  // Show results only if input is focused and there are results
   const shouldShowResults = inputFocused && showResults && results.length > 0;
 
   return (

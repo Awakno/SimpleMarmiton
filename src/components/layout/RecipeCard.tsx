@@ -14,7 +14,6 @@ export default function RecipeCard({
   content,
   createdAt,
 }: RecipeCardProps) {
-  // Replace markdown images with [Image], then strip other markdown and truncate
   const contentWithImage = content.replace(/!\[[^\]]*\]\([^\)]*\)/g, "");
   const excerpt =
     contentWithImage.replace(/[#*_`>\-\[\]!\(\)]/g, "").slice(0, 180) +
