@@ -2,9 +2,7 @@
 import { LoupeIcon } from "../icons/Loupe";
 import { useState, useEffect } from "react";
 import { LoadingIcon } from "../icons/Loading";
-
 import RecipeCard from "@/components/layout/RecipeCard";
-import { Recipe } from "@prisma/client";
 
 type SearchBarProps = {
   onSearch?: (value: string) => void;
@@ -18,7 +16,7 @@ export default function SearchBar({
   searchLoading,
 }: SearchBarProps) {
   const [value, setValue] = useState("");
-  const [results, setResults] = useState<Recipe[]>([]);
+  const [results, setResults] = useState<any[]>([]);
   const [showResults, setShowResults] = useState(false);
   const [inputFocused, setInputFocused] = useState(false);
   const isSearching = searchLoading || false;
