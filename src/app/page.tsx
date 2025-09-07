@@ -1,14 +1,13 @@
 "use client";
 
 import useSWR from "swr";
-import { Recipe } from "@prisma/client";
 import RecipeCard from "@/components/layout/RecipeCard";
 import { LoadingIcon } from "@/components/icons/Loading";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 export default function Home() {
-  const { data, error } = useSWR<Recipe[]>("/api/recipe", fetcher);
+  const { data, error } = useSWR<any[]>("/api/recipe", fetcher);
 
   if (error) return <div>Failed to load recipes</div>;
   if (!data)
